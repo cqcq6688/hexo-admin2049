@@ -1,4 +1,8 @@
-
+/**
+ * admin menu bar
+ * @param  {[type]} 'react-router' [description]
+ * @return {[type]}                [description]
+ */
 var Link = require('react-router').Link
 var React = require('react')
 
@@ -7,12 +11,12 @@ var App = React.createClass({
     return <div className="app">
       <div className="app_header">
         <img src="logo.png" className="app_logo"/>
-        <span className="app_title">Hexo Admin</span>
+        <span className="app_title">Post Admin</span>
         <ul className="app_nav">
-          <li><Link to="posts">Posts</Link></li>
-          <li><Link to="pages">Pages</Link></li>
+          <li><Link to="posts">Post</Link></li>
+          <li><Link to="pages">Page</Link></li>
           <li><Link to="about">About</Link></li>
-          <li><Link to="deploy">Deploy</Link></li>
+          <li><Link to="deploy">Generate</Link></li>
           <li><Link to="settings">Settings</Link></li>
         </ul>
       </div>
