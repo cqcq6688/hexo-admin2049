@@ -227,12 +227,15 @@ module.exports = function(app, hexo) {
                 return res.send(500, 'Failed to create page')
             })
             .then(function(file) {
-                var source = file.path.slice(hexo.source_dir.length)
-
-                hexo.source.process([source]).then(function() {
-                    var page = hexo.model('Page').findOne({ source: source })
-                    res.done(addIsDraft(page));
-                });
+                // var source = file.path.slice(hexo.source_dir.length)
+                // hexo.source.process([source]).then(function() {
+                //     var page = hexo.model('Page').findOne({ source: source })
+                //     console.log('[page]', page)
+                //     res.done(addIsDraft(page));
+                // });
+                res.done({
+                    result: 'success'
+                })
             });
     });
 

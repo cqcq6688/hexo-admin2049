@@ -28,10 +28,11 @@ var Pages = React.createClass({
   },
 
   _onNew: function (page) {
-    var pages = this.state.pages.slice()
-    pages.unshift(page)
-    this.setState({pages: pages})
-    Router.transitionTo('page', {pageId: page._id})
+    api.pages().then((list) => {
+      const pages = _.sortBy(list, ['isDraft', 'date']).reverse()
+      const page = pages[0]
+      Router.transitionTo('page', {pageId: page._id})
+    })
   },
 
   goTo: function (id, e) {

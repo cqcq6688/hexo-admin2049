@@ -67,7 +67,7 @@ var NewPost = React.createClass({
       return <div className="new-post" onClick={this._onShow}>
         <div className="new-post_button">
           <i className="fa fa-plus"/>{' '}
-          New Post
+          添加新文章
         </div>
       </div>
     }

@@ -116,30 +116,30 @@ var Editor = React.createClass({
         {!this.props.isPage && (this.props.isDraft ?
           /* this is a comment for publish button */
           <button className="editor_publish" onClick={this.props.onPublish}>
-            Publish
+            发布
           </button> :
           <button className="editor_unpublish" onClick={this.props.onUnpublish}>
-            Unpublish
+            停止发布
           </button>)}
 
           {!this.props.isPage && (this.props.isDraft ?
-          <button className="editor_remove" title="Remove"
+          <button className="editor_remove" title="删除"
                   onClick={this.props.onRemove}>
             <i className="fa fa-trash-o" aria-hidden="true"/>
           </button> :
-          <button className="editor_remove" title="Can't Remove Published Post"
+          <button className="editor_remove" title="已发布文章不能删除"
                   onClick={this.props.onRemove} disabled>
             <i className="fa fa-trash-o" aria-hidden="true"/>
           </button>)}
 
           {!this.props.isPage &&
-          <button className="editor_checkGrammar" title="Check for Writing Improvements"
+          <button className="editor_checkGrammar" title="语法检查"
                   onClick={this.onCheckGrammar}>
             <i className="fa fa-check-circle-o"/>
           </button>}
           {/* add image button */}
           {!this.props.isPage &&
-            <button className="editor_addImage" title="Add Image to Post"
+            <button className="editor_addImage" title="添加图片"
                     onClick={this.onAddImage}>
               <i className="fa fa-picture-o"/>
             </button>
@@ -173,7 +173,7 @@ var Editor = React.createClass({
             <span className="editor_word-count">
               {this.props.wordCount} words
             </span>
-            Preview
+            预览
             {' '}<a className="editor_perma-link" href={this.state.previewLink} target="_blank">
               <i className="fa fa-link"/> {this.state.postPath}
             </a>

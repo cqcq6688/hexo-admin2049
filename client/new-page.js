@@ -68,7 +68,7 @@ var NewPage = React.createClass({
       return <div className="new-post" onClick={this._onShow}>
         <div className="new-post_button">
           <i className="fa fa-plus"/>{' '}
-          New page
+          添加新页面
         </div>
       </div>
     }
